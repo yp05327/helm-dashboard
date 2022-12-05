@@ -10,7 +10,11 @@ import (
 
 func (d *DataLayer) runCommandKubectl(cmd ...string) (string, error) {
 	if d.Kubectl == "" {
-		d.Kubectl = "kubectl"
+		if d.K3S {
+			d.Kubectl = "k3s kubectl"
+		}else{
+			d.Kubectl = "kubectl"
+		}
 	}
 
 	cmd = append([]string{d.Kubectl}, cmd...)

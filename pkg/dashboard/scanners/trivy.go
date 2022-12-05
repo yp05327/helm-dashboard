@@ -1,8 +1,8 @@
 package scanners
 
 import (
-	"github.com/komodorio/helm-dashboard/pkg/dashboard/subproc"
-	"github.com/komodorio/helm-dashboard/pkg/dashboard/utils"
+	"subproc"
+	"utils"
 	log "github.com/sirupsen/logrus"
 	"strconv"
 	"strings"

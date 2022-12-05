@@ -25,6 +25,7 @@ type options struct {
 	BindHost   string `long:"bind" description:"Host binding to start server (default: localhost)"` // default should be printed but not assigned as the precedence: flag > env > default
 	Port       uint   `short:"p" long:"port" description:"Port to start server on" default:"8080"`  // TODO: better default port to clash less?
 	Namespace  string `short:"n" long:"namespace" description:"Limit operations to a specific namespace"`
+	K3S        bool   `long:"k3s" description:"Support for k3s in truenas"`
 }
 
 func main() {
@@ -45,6 +46,7 @@ func main() {
 		Address:    fmt.Sprintf("%s:%d", opts.BindHost, opts.Port),
 		Debug:      opts.Verbose,
 		NoTracking: opts.NoTracking,
+		K3S:        opts.K3S
 	}
 	address, webServerDone := server.StartServer()
 

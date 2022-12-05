@@ -7,8 +7,8 @@ import (
 	"strings"
 
 	"github.com/gin-gonic/gin"
-	"github.com/komodorio/helm-dashboard/pkg/dashboard/subproc"
-	"github.com/komodorio/helm-dashboard/pkg/dashboard/utils"
+	"subproc"
+	"utils"
 )
 
 type HelmHandler struct {

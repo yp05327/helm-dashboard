@@ -2,8 +2,8 @@ package scanners
 
 import (
 	"encoding/json"
-	"github.com/komodorio/helm-dashboard/pkg/dashboard/subproc"
-	"github.com/komodorio/helm-dashboard/pkg/dashboard/utils"
+	"subproc"
+	"utils"
 	"github.com/olekukonko/tablewriter"
 	log "github.com/sirupsen/logrus"
 	v1 "k8s.io/apimachinery/pkg/apis/testapigroup/v1"

@@ -12,7 +12,7 @@ import (
 	"github.com/hexops/gotextdiff"
 	"github.com/hexops/gotextdiff/myers"
 	"github.com/hexops/gotextdiff/span"
-	"github.com/komodorio/helm-dashboard/pkg/dashboard/utils"
+	"utils"
 	log "github.com/sirupsen/logrus"
 	"gopkg.in/yaml.v3"
 	"helm.sh/helm/v3/pkg/release"

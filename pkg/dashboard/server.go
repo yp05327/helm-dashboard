@@ -11,9 +11,9 @@ import (
 
 	"github.com/gin-gonic/gin"
 	"github.com/hashicorp/go-version"
-	"github.com/komodorio/helm-dashboard/pkg/dashboard/scanners"
-	"github.com/komodorio/helm-dashboard/pkg/dashboard/subproc"
-	"github.com/komodorio/helm-dashboard/pkg/dashboard/utils"
+	"scanners"
+	"subproc"
+	"utils"
 	log "github.com/sirupsen/logrus"
 )
 
@@ -23,6 +23,7 @@ type Server struct {
 	Address    string
 	Debug      bool
 	NoTracking bool
+	K3S        bool
 }
 
 func (s Server) StartServer() (string, utils.ControlChan) {
@@ -41,6 +42,7 @@ func (s Server) StartServer() (string, utils.ControlChan) {
 		CurVer:             s.Version,
 		Analytics:          enableAnalytics,
 		LimitedToNamespace: s.Namespace,
+		K3S:                s.K3S
 	}
 	go checkUpgrade(data.StatusInfo)
 

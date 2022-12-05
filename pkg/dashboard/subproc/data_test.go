@@ -1,7 +1,7 @@
 package subproc
 
 import (
-	"github.com/komodorio/helm-dashboard/pkg/dashboard/utils"
+	"utils"
 	log "github.com/sirupsen/logrus"
 	"helm.sh/helm/v3/pkg/release"
 	v1 "k8s.io/apimachinery/pkg/apis/testapigroup/v1"

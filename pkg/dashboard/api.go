@@ -7,9 +7,9 @@ import (
 	"path"
 
 	"github.com/gin-gonic/gin"
-	"github.com/komodorio/helm-dashboard/pkg/dashboard/handlers"
-	"github.com/komodorio/helm-dashboard/pkg/dashboard/subproc"
-	"github.com/komodorio/helm-dashboard/pkg/dashboard/utils"
+	"handlers"
+	"subproc"
+	"utils"
 	log "github.com/sirupsen/logrus"
 )
 
